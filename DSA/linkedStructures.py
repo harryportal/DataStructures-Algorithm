@@ -1,4 +1,4 @@
-# building a linked list
+# building a singly linked list
 class Link:
     def __init__(self, data):
         self.data = data
@@ -121,10 +121,9 @@ print(splinhalf(a))
 def search_sorted(head, target):
     curNode = head
     while curNode is not None and curNode.data < target:
-        if curNode.data == target:
-            return True
-        else:
-            curNode = curNode.next
+        curNode = curNode.next
+    if curNode.data == target:
+        return True
     return False # node not in sorted linked list
 
 
