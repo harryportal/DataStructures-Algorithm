@@ -46,8 +46,9 @@ def binary_search(thelist, value):
 
 def bubble_sort(the_list):
     n = len(the_list)
+    """ iterates over n-1 elements """
     for i in range(n-1):
-        for j in range(i, n-2):
+        for j in range(i, n-2): # swaps the largest to the smallest element
             if the_list[j] > the_list[j+1]:
                 the_list[j], the_list[j+1] = the_list[j+1], the_list[j]
     return the_list
